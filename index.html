@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Project: Library</title>
+		<link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>My <span>Library</span></h1>
+
+			<form action="#">
+				<div class="form-group">
+					<label for="title">Title</label>
+					<input type="text" name="title" id="title" class="form-control" required/>
+				</div>
+				<div class="form-group">
+					<label for="author">Author</label>
+					<input type="text" name="author" id="author" class="form-control" required/>
+				</div>
+				<div class="form-group">
+					<label for="pages">Pages</label>
+					<input type="number" name="pages" id="pages" class="form-control" required/>
+				</div>
+				<div class="form-group">
+					<p>Have you read the book?</p>
+					<label for="yes" class="read-label">
+						<input type="radio" name="read" id="yes" value="Yes">
+						Yes
+					</label>
+					<label for="no" class="read-label">
+						<input type="radio" name="read" id="no" value="No" checked="checked">
+						No
+					</label>
+				</div>
+				<input type="button" value="Add Book" class="btn">
+
+			</form>
+
+			<table>
+				<thead>
+					<th>Title</th>
+					<th>Author</th>
+					<th>Pages</th>
+					<th>Read</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>The Hobbit</td>
+						<td>J.R.R. Tolkien</td>
+						<td>452</td>
+						<td>yes</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<script src="app.js"></script>
+	</body>
+</html>

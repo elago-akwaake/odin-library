@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+/* 01 Container Styles */
+.container {
+    margin: 0 auto;
+    padding: 1.5em 1em;
+}
+
+@media screen and (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+/* 02 Font styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    margin: 0 0 .75em;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+p {
+    margin: 0 0 .35em;
+}
+
+h1>span {
+    color: teal;
+}
+
+/* 03 Form Styles */
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-control {
+    width: 100%;
+    margin-top: .35em;
+    padding: .35em .5em;
+}
+
+.read-label {
+    display: block;
+    width: 100%;
+}
+
+.btn, .btn:active {
+    width: 100%;
+    padding: .75em;
+    border: none;
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+
+.btn:hover {
+    background-color: turquoise;
+}
+
+/* 04 Table Styles */
+form {
+    margin-bottom: 2em;
+}
+table {
+    width: 100%;
+    margin-top: ;
+    border-collapse: collapse;
+    text-align: left;
+}
+th {
+    border-bottom: 1px solid black;
+}
+
+tr {
+    border-bottom: 1px solid grey;
+    padding: 5em;
+}
+
+tr:nth-child(even) {
+    background-color: thistle;
+}
+td, th {
+    padding: .35em;
+}
