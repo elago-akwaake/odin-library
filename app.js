@@ -22,7 +22,7 @@ displayBooks();
 
 // 03 Display books
 function displayBooks() {
-	table.innerHTML = ""
+	table.innerHTML = '';
 
 	myLibrary.map((book) => {
 		const newRow = document.createElement('tr');
@@ -54,20 +54,24 @@ function addBookToLibrary() {
 	const pagesInput = document.querySelector('#pages');
 	const readInput = document.querySelector('input[name="read"]:checked');
 
-	// Store input values in a new Book object
-	const newBook = new Book(
-		titleInput.value,
-		authorInput.value,
-		pagesInput.value,
-		readInput.value
-	);
+	if (titleInput.value == '' && authorInput.value == '' && pagesInput.value == '') {
+		alert('Enter a book.');
+	} else {
+		// Store input values in a new Book object
+		const newBook = new Book(
+			titleInput.value,
+			authorInput.value,
+			pagesInput.value,
+			readInput.value
+		);
 
-	console.log(newBook.info());
+		console.log(newBook.info());
 
-	// Add Book object to the myLibrary array
-	myLibrary.push(newBook);
-	console.table(myLibrary);
-	displayBooks();
+		// Add Book object to the myLibrary array
+		myLibrary.push(newBook);
+		console.table(myLibrary);
+		displayBooks();
+	}
 }
 
 button.addEventListener('click', addBookToLibrary);
